@@ -60,7 +60,7 @@ class _AvailableCarsState extends State<AvailableCars> {
               SizedBox( height: 16.0,),
               
               Text(
-                'Available Cars ( ${getCarList().length.toString()})',
+                'Available Cars (${getCarList().length.toString()})',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 35,

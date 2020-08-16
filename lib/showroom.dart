@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
 import 'data.dart';
 import 'package:flutter_ui_cart_rent/car_widget.dart';
 import 'package:flutter_ui_cart_rent/dealer_widget.dart';
 import 'package:flutter_ui_cart_rent/available_cars.dart';
+import 'package:flutter_ui_cart_rent/book_car.dart';
 
 class ShowRoom extends StatefulWidget {
   @override
@@ -263,7 +263,15 @@ class _ShowRoomState extends State<ShowRoom> {
   List<Widget> _buildDeals(){
     List<Widget> list = [];
     for(var i= 0; i < cars.length; i++){
-      list.add(builCar(cars[i], i));
+      list.add(GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => BookCar(car: cars[i]))
+          );
+        },
+        child: builCar(cars[i], i)
+      ));
     }
 
     return list;

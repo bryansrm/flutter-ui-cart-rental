@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'data.dart';
-import 'constants.dart';
 
 Widget buildDealer(Dealer dealer, int index){
   return Container(
