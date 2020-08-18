@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_cart_rent/animation_card_list.dart';
 
 import 'constants.dart';
 import 'data.dart';
@@ -45,9 +46,17 @@ class _ShowRoomState extends State<ShowRoom> {
         ),
         centerTitle: false,
         actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 15.0),
-            child: Icon( Icons.menu, color: Colors.black, size: 30),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AnimationCardList())
+              );
+            },
+            child: Padding(
+              padding: EdgeInsets.only(right: 15.0),
+              child: Icon( Icons.menu, color: Colors.black, size: 30),
+            ),
           )
         ],
       ),
@@ -303,7 +312,8 @@ class _ShowRoomState extends State<ShowRoom> {
         });
       },
       child: Container(
-        width: 50,
+        color: Colors.transparent,
+        width: 70,
         child: Stack(
           children: [
 
